@@ -98,16 +98,7 @@ The following test cases are implemented:
 - **Axios**: HTTP client for API requests.
 - **Mongoose**: MongoDB object modeling.
 - **Express.js**: Backend framework.
-- **Express.js**: Backend framework.
 -**node-cron**:Time Resend of API Request.
-
-### Docker Usage
-
-MongoDB container setup:
-
-```bash
-docker run -d -p 27017:27017 --name weather-db mongo
-```
 
 ### Design Choices
 
