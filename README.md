@@ -52,15 +52,20 @@ Once the database is set up, you can start the application by running:
 npm start
 ```
 
-### Project Structure
+## Project Structure
 
-- **src/**: Contains the main application files and folders.
-  - **controllers/**: Business logic for data processing, rollups, and alerting.
-  - **models/**: Data models and schema definitions for MongoDB.
-  - **services/**: External API integration for OpenWeatherMap.
-  - **utils/**: Helper functions (e.g., temperature conversion, alert checks).
-  - **routes/**: REST API endpoints.
-  - **visualization/**: UI for displaying summaries and trends.
+### **src/**
+Contains the main application files and folders responsible for the core functionalities of the Real-Time Weather Monitoring System.
+
+- **models/**: This directory contains data models and schema definitions for MongoDB. It defines how weather data is structured and stored in the database, enabling easy interactions with the database through Mongoose.
+
+- **index.js**: This file serves as the entry point for the application. It includes:
+  - **Routes**: Defines the REST API endpoints for the application.
+  - **Cron Jobs**: Implements scheduled tasks that fetch weather data at regular intervals (every 5 minutes).
+  - **API Functionality**: Integrates with the OpenWeatherMap API to retrieve real-time weather data.
+
+- **server.js**: This file is responsible for creating an instance of the backend server using Express.js. It configures middleware, establishes the connection to the database, and starts the application to listen for incoming requests.
+
 
 ### Processing and Analysis
 
