@@ -5,7 +5,6 @@ This project is a real-time weather monitoring system that fetches, processes, a
 ## Features
 
 - **Real-Time Weather Data**: Continuously retrieves weather data from the OpenWeatherMap API at a configurable interval.
-- **Temperature Conversion**: Converts temperatures from Kelvin to Celsius (or Fahrenheit based on user preference).
 - **Daily Weather Summary**: Aggregates data into daily summaries with average, maximum, minimum temperatures, and dominant weather conditions.
 - **Alerting System**: User-configurable alerts based on temperature or specific weather conditions.
 - **Visualization**: Displays weather summaries, historical trends, and alerts.
@@ -16,7 +15,6 @@ This project is a real-time weather monitoring system that fetches, processes, a
 
 1. [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
 2. [MongoDB](https://www.mongodb.com/) or another compatible database system
-3. [Docker](https://www.docker.com/) or [Podman](https://podman.io/) for containerizing services (optional)
 
 ### Setup Instructions
 
@@ -42,18 +40,10 @@ npm install
 
 ```plaintext
 OPENWEATHER_API_KEY=your_api_key_here
-DB_CONNECTION_STRING=your_mongodb_connection_string
-POLLING_INTERVAL=300000 # in milliseconds (5 minutes)
-ALERT_THRESHOLD_TEMP=35 # Threshold for alerts
+CONNECTION_STRING=your_mongodb_connection_string
+PORT=3001
 ```
 
-### Set Up the Database
-
-Ensure that MongoDB is running, either locally or via Docker. You can set up a MongoDB instance using the following Docker command:
-
-```bash
-docker run -d -p 27017:27017 --name weather-db mongo
-```
 ### Start the Application
 
 Once the database is set up, you can start the application by running:
