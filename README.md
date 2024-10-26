@@ -24,3 +24,12 @@ This project is a real-time weather monitoring system that fetches, processes, a
    ```bash
    git clone https://github.com/your-username/real-time-weather-monitoring.git
    cd real-time-weather-monitoring
+
+## Setup Instructions
+
+### Install Dependencies
+
+Run the following command to install the necessary dependencies for the project:
+
+```bash
+npm install
