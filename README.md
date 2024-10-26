@@ -70,7 +70,6 @@ Contains the main application files and folders responsible for the core functio
 ### Processing and Analysis
 
 - **Data Collection**: The system retrieves weather data for the cities: Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad.
-- **Temperature Conversion**: All temperature values are converted from Kelvin to Celsius or Fahrenheit.
 - **Daily Summaries**: Data is rolled up daily to calculate:
   - **Average Temperature**: Mean temperature across all data points for the day.
   - **Max/Min Temperature**: Highest and lowest temperature readings of the day.
@@ -99,8 +98,8 @@ The following test cases are implemented:
 - **Axios**: HTTP client for API requests.
 - **Mongoose**: MongoDB object modeling.
 - **Express.js**: Backend framework.
-- **Nodemailer**: For email alerts (optional).
-- **Echarts**: For visualizations (optional).
+- **Express.js**: Backend framework.
+-**node-cron**:Time Resend of API Request.
 
 ### Docker Usage
 
