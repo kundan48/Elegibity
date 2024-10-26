@@ -33,3 +33,16 @@ Run the following command to install the necessary dependencies for the project:
 
 ```bash
 npm install
+```
+
+### Configure Environment Variables
+
+1. Create a `.env` file in the root directory of the project.
+2. Add your OpenWeatherMap API key and other configurations to the `.env` file:
+
+```plaintext
+OPENWEATHER_API_KEY=your_api_key_here
+DB_CONNECTION_STRING=your_mongodb_connection_string
+POLLING_INTERVAL=300000 # in milliseconds (5 minutes)
+ALERT_THRESHOLD_TEMP=35 # Threshold for alerts
+
