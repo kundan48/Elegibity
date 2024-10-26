@@ -54,4 +54,10 @@ Ensure that MongoDB is running, either locally or via Docker. You can set up a M
 ```bash
 docker run -d -p 27017:27017 --name weather-db mongo
 ```
+### Start the Application
 
+Once the database is set up, you can start the application by running:
+
+```bash
+npm start
+```
