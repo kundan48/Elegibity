@@ -45,4 +45,13 @@ OPENWEATHER_API_KEY=your_api_key_here
 DB_CONNECTION_STRING=your_mongodb_connection_string
 POLLING_INTERVAL=300000 # in milliseconds (5 minutes)
 ALERT_THRESHOLD_TEMP=35 # Threshold for alerts
+```
+
+### Set Up the Database
+
+Ensure that MongoDB is running, either locally or via Docker. You can set up a MongoDB instance using the following Docker command:
+
+```bash
+docker run -d -p 27017:27017 --name weather-db mongo
+```
 
