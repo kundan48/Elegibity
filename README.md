@@ -113,4 +113,19 @@ MongoDB container setup:
 
 ```bash
 docker run -d -p 27017:27017 --name weather-db mongo
+```
+
+### Design Choices
+
+- **Configurable Intervals**: Allows users to set data polling intervals based on their preferences.
+- **Database**: Utilizes MongoDB for real-time data storage and quick aggregation operations, enhancing performance.
+- **Temperature Conversion**: Implemented as a user preference, enabling flexibility in displaying temperature units (Celsius/Fahrenheit).
+
+### Contributing
+
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+
+### License
+
+This project is licensed under the MIT License.
 
