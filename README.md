@@ -101,10 +101,8 @@ The following test cases are implemented:
 -**node-cron**:Time Resend of API Request.
 
 ### Design Choices
-
-- **Configurable Intervals**: Allows users to set data polling intervals based on their preferences.
 - **Database**: Utilizes MongoDB for real-time data storage and quick aggregation operations, enhancing performance.
-- **Temperature Conversion**: Implemented as a user preference, enabling flexibility in displaying temperature units (Celsius/Fahrenheit).
+
 
 ### Contributing
 
