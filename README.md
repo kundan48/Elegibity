@@ -100,8 +100,18 @@ The following test cases are implemented:
 - **Express.js**: Backend framework.
 -**node-cron**:Time Resend of API Request.
 
-### Design Choices
-- **Database**: Utilizes MongoDB for real-time data storage and quick aggregation operations, enhancing performance.
+## Design Choices
+
+### Database
+- **MongoDB**: Utilizes MongoDB for real-time data storage and efficient aggregation operations. This choice enhances performance by allowing quick read and write operations, which is crucial for handling frequent weather updates.
+
+### Backend Framework
+- **Express.js**: The application is built using Express.js, a minimal and flexible Node.js web application framework. Express.js simplifies the creation of robust APIs and server-side applications, enhancing development speed.
+
+### Scheduling Tasks
+- **node-cron**: This module is used to schedule tasks for resending API requests at regular intervals (every 5 minutes). It allows the application to automate the retrieval of weather data, ensuring that the information remains up-to-date without manual intervention.
+
+These design choices collectively contribute to a responsive, efficient, and scalable weather monitoring system that effectively handles real-time data and user-defined requirements.
 
 
 ### Contributing
