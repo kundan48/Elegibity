@@ -61,3 +61,56 @@ Once the database is set up, you can start the application by running:
 ```bash
 npm start
 ```
+
+### Project Structure
+
+- **src/**: Contains the main application files and folders.
+  - **controllers/**: Business logic for data processing, rollups, and alerting.
+  - **models/**: Data models and schema definitions for MongoDB.
+  - **services/**: External API integration for OpenWeatherMap.
+  - **utils/**: Helper functions (e.g., temperature conversion, alert checks).
+  - **routes/**: REST API endpoints.
+  - **visualization/**: UI for displaying summaries and trends.
+
+### Processing and Analysis
+
+- **Data Collection**: The system retrieves weather data for the cities: Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad.
+- **Temperature Conversion**: All temperature values are converted from Kelvin to Celsius or Fahrenheit.
+- **Daily Summaries**: Data is rolled up daily to calculate:
+  - **Average Temperature**: Mean temperature across all data points for the day.
+  - **Max/Min Temperature**: Highest and lowest temperature readings of the day.
+  - **Dominant Weather Condition**: Determined based on the most frequently occurring weather condition (e.g., Clear, Rain).
+- **Alerts**: User-defined thresholds trigger alerts if conditions are met for consecutive data updates.
+
+### Testing
+
+The following test cases are implemented:
+
+- **System Setup**: Verifies the connection to the OpenWeatherMap API.
+- **Data Retrieval**: Simulates API calls and checks data parsing for location-specific weather data.
+- **Temperature Conversion**: Tests Kelvin to Celsius/Fahrenheit conversion.
+- **Daily Summary**: Verifies calculations for average, max, min temperatures, and dominant weather condition.
+- **Alerting**: Simulates data exceeding thresholds and ensures alerts are triggered accordingly.
+
+### Bonus Features
+
+- **Additional Weather Parameters**: (e.g., humidity, wind speed) are included in summaries.
+- **Forecasts**: Extended functionality to retrieve and display forecasted conditions.
+
+### Dependencies
+
+- **Node.js**: Runtime environment.
+- **MongoDB**: Database for data persistence.
+- **Axios**: HTTP client for API requests.
+- **Mongoose**: MongoDB object modeling.
+- **Express.js**: Backend framework.
+- **Nodemailer**: For email alerts (optional).
+- **Echarts**: For visualizations (optional).
+
+### Docker Usage
+
+MongoDB container setup:
+
+```bash
+docker run -d -p 27017:27017 --name weather-db mongo
+
